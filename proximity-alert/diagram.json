@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Alp Serkan Merkit",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 120, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "sonar", "top": 130, "left": 380, "attrs": { "distance": "100" } },
+    { "type": "wokwi-led", "id": "led_red", "top": -40, "left": 160, "attrs": { "color": "red", "label": "near" } },
+    { "type": "wokwi-led", "id": "led_blue", "top": -40, "left": 220, "attrs": { "color": "blue", "label": "medium (yellowLed)" } },
+    { "type": "wokwi-led", "id": "led_green", "top": -40, "left": 280, "attrs": { "color": "green", "label": "far" } },
+    { "type": "wokwi-led", "id": "led_fan", "top": -40, "left": 340, "attrs": { "color": "orange", "label": "fan PWM" } },
+    { "type": "wokwi-resistor", "id": "r_red", "top": 40, "left": 140, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r_blue", "top": 40, "left": 200, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r_green", "top": 40, "left": 260, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r_fan", "top": 40, "left": 320, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "sonar:VCC", "uno:5V", "red", [] ],
+    [ "sonar:GND", "uno:GND.2", "black", [] ],
+    [ "sonar:TRIG", "uno:9", "green", [] ],
+    [ "sonar:ECHO", "uno:10", "blue", [] ],
+    [ "uno:3", "r_red:2", "orange", [] ],
+    [ "r_red:1", "led_red:A", "orange", [] ],
+    [ "led_red:C", "uno:GND.1", "black", [] ],
+    [ "uno:5", "r_blue:2", "violet", [] ],
+    [ "r_blue:1", "led_blue:A", "violet", [] ],
+    [ "led_blue:C", "uno:GND.1", "black", [] ],
+    [ "uno:6", "r_green:2", "cyan", [] ],
+    [ "r_green:1", "led_green:A", "cyan", [] ],
+    [ "led_green:C", "uno:GND.1", "black", [] ],
+    [ "uno:11", "r_fan:2", "gold", [] ],
+    [ "r_fan:1", "led_fan:A", "gold", [] ],
+    [ "led_fan:C", "uno:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}

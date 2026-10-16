@@ -1,0 +1,74 @@
+{
+  "svg": "wiring-final-fan.svg",
+  "sketches": [
+    "../final-fan/final-fan.ino"
+  ],
+  "pins": [
+    {
+      "uno": "5V",
+      "to": "bottom + rail",
+      "step": 1,
+      "symbols": []
+    },
+    {
+      "uno": "GND",
+      "to": "bottom − rail",
+      "step": 2,
+      "symbols": []
+    },
+    {
+      "uno": "D9",
+      "to": "HC-SR04 TRIG",
+      "step": 5,
+      "symbols": [
+        "trigPin"
+      ]
+    },
+    {
+      "uno": "D10",
+      "to": "HC-SR04 ECHO",
+      "step": 6,
+      "symbols": [
+        "echoPin"
+      ]
+    },
+    {
+      "uno": "D3",
+      "to": "red LED (near)",
+      "step": 7,
+      "symbols": [
+        "redLed",
+        "redLedPin"
+      ]
+    },
+    {
+      "uno": "D5",
+      "to": "blue LED (medium)",
+      "step": 11,
+      "symbols": [
+        "yellowLed",
+        "yellowLedPin",
+        "blueLed"
+      ]
+    },
+    {
+      "uno": "D6",
+      "to": "green LED (far)",
+      "step": 15,
+      "symbols": [
+        "greenLed",
+        "greenLedPin"
+      ]
+    },
+    {
+      "uno": "D11",
+      "to": "1 kΩ → TIP120 base (motor speed, PWM)",
+      "step": 19,
+      "symbols": [
+        "motorPin"
+      ]
+    }
+  ],
+  "free_code_pins": [],
+  "unknown": []
+}

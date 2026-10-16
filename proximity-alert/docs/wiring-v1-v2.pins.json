@@ -1,0 +1,75 @@
+{
+  "svg": "wiring-v1-v2.svg",
+  "sketches": [
+    "../v1-simple/v1-simple.ino",
+    "../v2-advanced/v2-advanced.ino"
+  ],
+  "pins": [
+    {
+      "uno": "5V",
+      "to": "bottom + rail",
+      "step": 1,
+      "symbols": []
+    },
+    {
+      "uno": "GND",
+      "to": "bottom − rail",
+      "step": 2,
+      "symbols": []
+    },
+    {
+      "uno": "D9",
+      "to": "HC-SR04 TRIG",
+      "step": 5,
+      "symbols": [
+        "trigPin"
+      ]
+    },
+    {
+      "uno": "D10",
+      "to": "HC-SR04 ECHO",
+      "step": 6,
+      "symbols": [
+        "echoPin"
+      ]
+    },
+    {
+      "uno": "D3",
+      "to": "red LED (near)",
+      "step": 7,
+      "symbols": [
+        "redLed",
+        "redLedPin"
+      ]
+    },
+    {
+      "uno": "D5",
+      "to": "blue LED (medium)",
+      "step": 11,
+      "symbols": [
+        "yellowLed",
+        "yellowLedPin",
+        "blueLed"
+      ]
+    },
+    {
+      "uno": "D6",
+      "to": "green LED (far)",
+      "step": 15,
+      "symbols": [
+        "greenLed",
+        "greenLedPin"
+      ]
+    }
+  ],
+  "free_code_pins": [
+    {
+      "symbols": [
+        "motorPin"
+      ],
+      "uno": "D11",
+      "why": "the fan belongs to the final build (owner's order: v1/v2 = LEDs)"
+    }
+  ],
+  "unknown": []
+}
